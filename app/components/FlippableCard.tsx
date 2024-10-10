@@ -4,17 +4,25 @@ import { useState } from 'react';
 
 interface FlippableCardProps {
   title: string;
-  description: string;
+  duration?: string;
   cardType: 'E' | 'P';
 }
 
-export default function FlippableCard({ title, description, cardType }: FlippableCardProps) {
+export default function FlippableCard({ title, duration, cardType }: FlippableCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
     <div 
       className="bg-transparent w-full aspect-[3/4] perspective-1000 cursor-pointer group"
       onClick={() => setIsFlipped(!isFlipped)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          setIsFlipped(!isFlipped);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`${title} card. Press Enter to flip.`}
     >
       <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         <div className="absolute w-full h-full backface-hidden">
@@ -31,7 +39,7 @@ export default function FlippableCard({ title, description, cardType }: Flippabl
         </div>
         <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-[#251747] rounded-xl p-6 flex flex-col justify-center items-center text-center shadow-[0_0_15px_rgba(139,217,255,0.3)]">
           <h3 className="text-yellow text-2xl font-bold mb-4 font-serif">{title}</h3>
-          <p className="text-light-blue">{description}</p>
+          {duration && <p className="text-yellow-light">{duration}</p>}
         </div>
       </div>
     </div>
