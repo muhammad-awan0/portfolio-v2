@@ -7,6 +7,9 @@
   --foreground: #ffffff;
   --light-blue: #8BD9FF;
   --yellow: #FFD700;
+  --background-light: #2D1C59;
+  --yellow-light: #FFE666;
+  --card: #2D1C59;
 }
 
 body {

@@ -1,23 +1,23 @@
 import Link from 'next/link';
-import FlippableCard from './components/FlippableCard'; 
+import FlippableCard from './components/FlippableCard';
 
 // Define the card data
 const experiences = [
-  { id: 1, title: "Experience 1", description: "Description of Experience 1" },
-  { id: 2, title: "Experience 2", description: "Description of Experience 2" },
-  { id: 3, title: "Experience 3", description: "Description of Experience 3" },
+  { id: 1, title: "Boardy AI", description: "" },
+  { id: 2, title: "UTEX Scientific Instruments Inc", description: "" },
+  { id: 3, title: "Kazimoto Engineering", description: "" },
 ];
 
 const projects = [
-  { id: 1, title: "Project 1", description: "Description of Project 1" },
-  { id: 2, title: "Project 2", description: "Description of Project 2" },
-  { id: 3, title: "Project 3", description: "Description of Project 3" },
+  { id: 1, title: "SyFin", description: "" },
+  { id: 2, title: "moodify", description: "" },
+  { id: 3, title: "Calliope", description: "" },
 ];
 
 export default function Home() {
   return (
     <div className="min-h-screen flex justify-center p-8">
-      <div className="max-w-2xl w-full space-y-12 mt-56">
+      <div className="max-w-4xl w-full space-y-16 mt-56"> 
         <header>
           <h1 className="text-4xl mb-2 font-semibold">
             <span className="text-light-blue">hey, i&apos;m </span>
@@ -28,25 +28,25 @@ export default function Home() {
           </p>
         </header>
 
-        <section>
-          <h2 className="text-3xl font-bold text-yellow mb-6">experiences</h2>
-          <div className="grid grid-cols-3 gap-4">
+        <section className="mb-16"> 
+          <h2 className="text-3xl font-bold text-yellow mb-8">experiences</h2> 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
             {experiences.map((exp) => (
-              <FlippableCard key={exp.id} title={exp.title} description={exp.description} />
+              <FlippableCard key={exp.id} title={exp.title} description={exp.description} cardType="E" />
             ))}
           </div>
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold text-yellow mb-6">projects</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <h2 className="text-3xl font-bold text-yellow mb-8">projects</h2> 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
             {projects.map((proj) => (
-              <FlippableCard key={proj.id} title={proj.title} description={proj.description} />
+              <FlippableCard key={proj.id} title={proj.title} description={proj.description} cardType="P" />
             ))}
           </div>
         </section>
 
-        <footer className="text-light-blue text-sm">
+        <footer className="text-light-blue mt-16 text-lg font-medium"> 
           <p>
             this site is a wip, you can reach me via{' '}
             <Link href="mailto:muhammadawan434@gmail.com" className="text-yellow underline">
