@@ -17,7 +17,7 @@ const projects = [
 export default function Home() {
   return (
     <div className="min-h-screen flex justify-center p-8">
-      <div className="max-w-4xl w-full space-y-16 mt-56"> 
+      <div className="max-w-4xl w-full space-y-16 mt-32"> 
         <header>
           <h1 className="text-4xl mb-2 font-semibold">
             <span className="text-light-blue">hey, i&apos;m </span>
