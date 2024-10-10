@@ -53,7 +53,7 @@ export default function Home() {
               muhammadawan434@gmail.com
             </Link>
             , or schedule a meeting with me{' '}
-            <Link href="#" className="text-yellow underline">here</Link>.
+            <Link href="https://cal.com/muhammad-awan" className="text-yellow underline">here</Link>.
           </p>
         </footer>
       </div>
