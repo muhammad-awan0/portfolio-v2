@@ -24,7 +24,7 @@ export default function Home() {
             <span className="text-yellow">muhammad.</span>
           </h1>
           <p className="text-light-blue text-lg mt-6 font-medium">
-            I'm a 19 year old ml engineer from Toronto, 🇨🇦 with a love for ai and predictive modelling.
+            I&apos;m a 19 year old ml engineer from Toronto, 🇨🇦 with a love for ai and predictive modelling.
           </p>
         </header>
 
