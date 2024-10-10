@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import FlippableCard from './components/FlippableCard';  // Remove the .tsx extension
+import FlippableCard from './components/FlippableCard'; 
 
 // Define the card data
 const experiences = [
@@ -21,7 +20,7 @@ export default function Home() {
       <div className="max-w-2xl w-full space-y-12 mt-56">
         <header>
           <h1 className="text-4xl mb-2 font-semibold">
-            <span className="text-light-blue">hey, i'm </span>
+            <span className="text-light-blue">hey, i&apos;m </span>
             <span className="text-yellow">muhammad.</span>
           </h1>
           <p className="text-light-blue text-lg mt-6 font-medium">
