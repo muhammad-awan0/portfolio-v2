@@ -13,7 +13,7 @@ export default function FlippableCard({ title, duration, cardType }: FlippableCa
 
   return (
     <div 
-      className="bg-transparent w-full aspect-[3/4] perspective-1000 cursor-pointer group"
+      className="bg-transparent w-full aspect-[3/4] perspective-1000 cursor-pointer group transition-transform duration-300 hover:scale-105"
       onClick={() => setIsFlipped(!isFlipped)}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -26,12 +26,12 @@ export default function FlippableCard({ title, duration, cardType }: FlippableCa
     >
       <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         <div className="absolute w-full h-full backface-hidden">
-          <div className="w-full h-full bg-[#2D1C59] rounded-xl border-2 border-light-blue flex flex-col justify-between p-6 shadow-[0_0_15px_rgba(139,217,255,0.3)] group-hover:shadow-[0_0_20px_rgba(139,217,255,0.5)] transition-shadow duration-300">
+          <div className="w-full h-full bg-[#2D1C59] rounded-xl border-2 border-light-blue flex flex-col justify-between p-6 shadow-[0_0_15px_rgba(139,217,255,0.3)] group-hover:shadow-[0_0_20px_rgba(139,217,255,0.5)] transition-all duration-300">
             <div className="text-2xl font-bold text-yellow font-serif italic">{cardType}</div>
             <div className="text-8xl font-bold text-yellow self-center font-serif italic relative">
               {cardType}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 border-2 border-light-blue rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="w-24 h-24 border-2 border-light-blue rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
             </div>
             <div className="text-2xl font-bold text-yellow self-end rotate-180 font-serif italic">{cardType}</div>
