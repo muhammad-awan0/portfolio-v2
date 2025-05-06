@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 // Update the experiences and projects arrays with more details
 const experiences = [
-  { id: 1, title: "Boardy AI", duration: "2022 - Present" },
-  { id: 2, title: "UTEX Scientific Instruments Inc", duration: "2021 - 2022" },
-  { id: 3, title: "Kazimoto Engineering", duration: "2020 - 2021" },
+  { id: 1, title: "Boardy AI", duration: "2024 - Present" },
+  { id: 2, title: "UTEX Scientific Instruments Inc", duration: "2024 - 2024" },
+  { id: 3, title: "Kazimoto Engineering", duration: "2022 - 2023" },
 ];
 
 const projects = [
